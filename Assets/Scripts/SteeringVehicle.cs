@@ -32,7 +32,12 @@ public class SteeringVehicle : MonoBehaviour
     // Elke frametick kijken we hoe we moeten sturen
     void Update()
     {
-        SetTarget(targetTransform.position);
+        Move();
+    }
+
+    protected virtual void Move()
+    {
+        //SetTarget(targetTransform.position);
         Seek();
     }
 
